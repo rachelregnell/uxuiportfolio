@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 // Giant name letters that rise into place one by one.
@@ -24,6 +24,19 @@ function RisingWord({ text, delay = 0 }) {
 
 export default function Hero() {
   const ref = useRef(null)
+  const seamRef = useRef(null)
+
+  // Publish where the blue and black blocks meet, so the phone layout can center the sticker on that line.
+  useLayoutEffect(() => {
+    const section = ref.current
+    const blockB = seamRef.current
+    if (!section || !blockB) return
+    const update = () => section.style.setProperty('--seam', `${blockB.offsetTop}px`)
+    update()
+    const ro = new ResizeObserver(update)
+    ro.observe(section)
+    return () => ro.disconnect()
+  }, [])
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
   // The two name blocks drift apart as you scroll past.
   const xTop = useTransform(scrollYProgress, [0, 1], ['0%', '-8%'])
@@ -38,7 +51,7 @@ export default function Hero() {
             <span className="sr-only"> Regnell</span>
           </motion.h1>
         </div>
-        <div className="hero-block hero-block-b">
+        <div className="hero-block hero-block-b" ref={seamRef}>
           <motion.div className="hero-word" style={{ x: xBottom }} aria-hidden="true">
             <RisingWord text="Regnell" delay={0.35} />
           </motion.div>

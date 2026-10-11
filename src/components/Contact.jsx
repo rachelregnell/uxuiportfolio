@@ -49,8 +49,10 @@ export default function Contact({ onContact }) {
         <MagneticLink href={links.resume || '#contact'} className="btn btn-outline btn-big" {...(links.resume ? { ...external, download: 'Rachel_Regnell_Resume.pdf' } : {})}>
           Download resume
         </MagneticLink>
-        <a href={links.linkedin || '#contact'} className="text-link" {...(links.linkedin ? external : {})}>LinkedIn</a>
-        <a href={links.site} className="text-link" {...external}>rr.design</a>
+        <div className="contact-text-links">
+          <a href={links.linkedin || '#contact'} className="text-link" {...(links.linkedin ? external : {})}>LinkedIn</a>
+          <a href={links.site} className="text-link" {...external}>rr.design</a>
+        </div>
       </div>
       <div className="contact-foot">
         <span>© {new Date().getFullYear()} Rachel Regnell</span>
