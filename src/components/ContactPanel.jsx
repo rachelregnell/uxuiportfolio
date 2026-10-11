@@ -157,10 +157,37 @@ export default function ContactPanel({ open, onClose }) {
             <div className="cp-body" role="tabpanel">
               {tab === 'book' && (
                 <div className="cp-book">
-                  <iframe src={links.booking} title="Book a call with Rachel" loading="lazy" />
-                  <a className="cp-small-link" href={links.booking} target="_blank" rel="noreferrer">
-                    Calendar not loading? Open it in a new tab
-                  </a>
+                  {links.bookingEmbed ? (
+                    <>
+                      <iframe src={links.bookingEmbed} title="Book a call with Rachel" loading="lazy" />
+                      <a className="cp-small-link" href={links.booking} target="_blank" rel="noreferrer">
+                        Calendar not loading? Open it in a new tab
+                      </a>
+                    </>
+                  ) : (
+                    <div className="cp-book-card">
+                      <svg viewBox="0 0 48 48" width="56" height="56" aria-hidden="true">
+                        <rect x="5" y="9" width="38" height="34" rx="6" fill="var(--yellow)" stroke="var(--ink)" strokeWidth="3" />
+                        <path d="M5 19h38M15 5v8M33 5v8" stroke="var(--ink)" strokeWidth="3" strokeLinecap="round" />
+                        <circle cx="16" cy="28" r="2.5" fill="var(--ink)" />
+                        <circle cx="24" cy="28" r="2.5" fill="var(--ink)" />
+                        <circle cx="32" cy="28" r="2.5" fill="var(--blue)" />
+                        <circle cx="16" cy="35" r="2.5" fill="var(--ink)" />
+                      </svg>
+                      <p className="cp-book-title">Grab a time on my calendar</p>
+                      <p className="cp-book-text">Pick a slot that works for you. You'll get a calendar invite right away.</p>
+                      <motion.a
+                        className="btn btn-yellow btn-big"
+                        href={links.booking}
+                        target="_blank"
+                        rel="noreferrer"
+                        whileHover={{ scale: 1.05, rotate: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        Pick a time ↗
+                      </motion.a>
+                    </div>
+                  )}
                 </div>
               )}
               {tab === 'message' && <MessageForm />}
