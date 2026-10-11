@@ -14,6 +14,7 @@ import scioHome from './assets/projects/scio-gro-home.webp'
 import scioPantry from './assets/projects/scio-gro-pantry.webp'
 import scioRecipes from './assets/projects/scio-gro-recipes.webp'
 import siteGrandpa from './assets/projects/site-grandpa-resume.webp'
+import siteGrandpaPhoto from './assets/projects/site-grandpa-photo.webp'
 import siteV1 from './assets/projects/site-iteration-1.webp'
 import siteV2 from './assets/projects/site-iteration-2.webp'
 
@@ -155,7 +156,15 @@ export const projects = [
     tags: 'Personal Brand + Front-End + AWS Hosting + Always Iterating',
     hook: 'The history of this site: a portfolio named in homage to my grandfather, who had an online resume from the very start.',
     steps: [
-      { label: '01 The inspiration', caption: "Where it started: my grandfather's online resume. Simple, but he had one from the jump.", visual: { kind: 'image', src: siteGrandpa, alt: "My grandfather's online resume at his own domain: a plain text page with his experience and education, contact details blurred" } },
+      {
+        label: '01 The inspiration',
+        caption: "Where it started: my grandfather, and his online resume. Simple, but he had one from the jump.",
+        visual: {
+          kind: 'pair',
+          photo: { src: siteGrandpaPhoto, alt: 'Black-and-white portrait photo of my grandfather as a young man' },
+          doc: { src: siteGrandpa, alt: "My grandfather's online resume at his own domain: a plain text page with his experience and education, contact details blurred" },
+        },
+      },
       { label: '02 Iteration 1', caption: 'Iteration 1 (2025 to 2026): a retro teal-and-cream site, vibe coded with Claude and VS Code and hosted on AWS.', visual: { kind: 'image', src: siteV1, alt: 'Iteration 1 of the site: a retro teal and cream portfolio with a script display font, showing the hero, work list, about section, and contact page' } },
       { label: '03 Iteration 2', caption: "Iteration 2: the one you're looking at. Bold, bright, and animated with Framer Motion.", visual: { kind: 'image', src: siteV2, width: '62%', alt: 'Iteration 2, the current site, on a phone: bold blue and yellow name blocks, an Open to CX and GTM roles sticker, and the story picker' } },
       { label: '04 Result', caption: 'Result. Still growing, still in homage to him.' },

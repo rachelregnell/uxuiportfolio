@@ -33,6 +33,37 @@ function Visual({ step, project, onZoom }) {
       </div>
     )
   }
+  if (v.kind === 'pair') {
+    // A tilted photo print laid over a document, each tappable to zoom.
+    return (
+      <div className="pair">
+        <motion.button
+          type="button"
+          className="zoomable pair-doc"
+          onClick={() => onZoom(v.doc)}
+          initial={{ rotate: 0, opacity: 0 }}
+          animate={{ rotate: 3, opacity: 1 }}
+          whileHover={{ rotate: 0, scale: 1.02 }}
+          transition={{ type: 'spring', stiffness: 200, damping: 18 }}
+          aria-label={`Zoom: ${v.doc.alt}`}
+        >
+          <img src={v.doc.src} alt={v.doc.alt} className="framed" />
+        </motion.button>
+        <motion.button
+          type="button"
+          className="zoomable pair-photo"
+          onClick={() => onZoom(v.photo)}
+          initial={{ rotate: -20, y: 40, opacity: 0 }}
+          animate={{ rotate: -7, y: 0, opacity: 1 }}
+          whileHover={{ rotate: -2, scale: 1.05 }}
+          transition={{ type: 'spring', stiffness: 220, damping: 16, delay: 0.12 }}
+          aria-label={`Zoom: ${v.photo.alt}`}
+        >
+          <img src={v.photo.src} alt={v.photo.alt} />
+        </motion.button>
+      </div>
+    )
+  }
   if (v.kind === 'phones') {
     const tilt = [-6, 0, 6]
     return (

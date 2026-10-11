@@ -473,6 +473,33 @@ h3 {
   border-radius: 50%;
 }
 
+.pair {
+  position: relative;
+  padding: 0 0 18% 0;
+}
+
+.pair-doc {
+  width: 86%;
+  margin-left: auto;
+}
+
+/* the photo sits like a print dropped onto the corner of the page */
+.pair-photo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52%;
+  padding: 8px 8px 26px;
+  background: #fbf8f1;
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.pair-photo img {
+  border-radius: 2px;
+}
+
 .phones {
   display: flex;
   align-items: center;
