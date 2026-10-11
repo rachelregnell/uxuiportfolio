@@ -32,7 +32,7 @@ export const links = {
   // Optional: the calendar's embed address, to show it inside the panel instead of a button.
   // Google Calendar: open the appointment schedule → Share → Website embed → Inline calendar,
   // and copy the src="…" value (it looks like https://calendar.google.com/calendar/appointments/schedules/…?gv=true).
-  bookingEmbed: '',
+  bookingEmbed: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0qioewNSwpn4USXXVq5WazJFpeJniAOOe8IdJ_ndPlmyv8PI4CUY_I4HNCU6JFQtj5j-bpIEpQ?gv=true',
   // Formspree endpoint, e.g. 'https://formspree.io/f/abcd1234'. Messages arrive in your inbox.
   formspree: 'https://formspree.io/f/xgorrlky',
 }
