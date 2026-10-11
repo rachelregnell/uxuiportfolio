@@ -5,20 +5,20 @@ A playful, interactive portfolio built with React, [Vite](https://vite.dev) and
 
 ## What's inside
 
-- **Hero**: letters that bounce when you hover them, plus stickers you can drag and throw around
-- **Work**: 3D-tilt project cards that open into case-study modals (press → for the next one, Esc to close)
-- **Playground**: a working version of the iOS coffee checkout, with live totals and confetti
-- **About**: goal sticky notes you can rearrange
-- **Contact**: magnetic buttons
+Built from the "Rachel Regnell Portfolio Mockup" design canvas, with Framer Motion interactions added:
+
+- **Hero**: giant RACHEL / REGNELL blocks whose letters rise into place, swap colors on hover and drift apart as you scroll. The "Open to CX + GTM roles" sticker spins and can be dragged.
+- **Pick a story**: 5 case studies (Fresh Start, Ondus on the Waterfront, Bonita Paws, Scio-gro, rachelregnell.com). Each has 4 steps you can flip through, with animated transitions, tap-to-zoom images and count-up results.
+- **Problem / Approach / Result / If I had more time** panels that update with the chosen project
+- **Proof** (18 TripAdvisor reviews, counted up), **Built for a GTM team** concept cards, a **Next project** button and the **Let's talk** footer
 - Honors the visitor's "reduce motion" setting
 
 ## Editing content
 
-All copy, links and projects live in [`src/content.js`](src/content.js). Fill in `email`,
-`linkedin` and `resume` there to show the contact buttons. To add a project, drop an image
-into `src/assets/work/` and add an entry to `projects`.
+All copy, links, images and projects live in [`src/content.js`](src/content.js). Fill in `email`,
+`linkedin` and `resume` there to wire up the contact buttons. Project images are in `src/assets/projects/`.
 
-The original full-size design exports are in `design-files/`.
+Older full-size design exports are in `design-files/`.
 
 ## Running locally
 
