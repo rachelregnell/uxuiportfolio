@@ -25,6 +25,7 @@ export const links = {
   // Empty values fall back to scrolling to the contact section.
   email: 'design@rachelregnell.com',
   linkedin: 'https://www.linkedin.com/in/rachel-regnell/',
+  github: 'https://github.com/rachelregnell',
   // Files in public/ are served next to the page; BASE_URL keeps the path right on GitHub Pages.
   resume: `${import.meta.env.BASE_URL}Rachel_Regnell_Resume.pdf`,
   site: 'https://rare-status-284958.framer.app/',

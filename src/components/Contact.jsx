@@ -51,6 +51,7 @@ export default function Contact({ onContact }) {
         </MagneticLink>
         <div className="contact-text-links">
           <a href={links.linkedin || '#contact'} className="text-link" {...(links.linkedin ? external : {})}>LinkedIn</a>
+          {links.github && <a href={links.github} className="text-link" {...external}>GitHub</a>}
           <a href={links.site} className="text-link" {...external}>rr.design</a>
         </div>
       </div>
