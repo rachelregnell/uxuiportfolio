@@ -168,3 +168,85 @@ export const gtmConcepts = [
   { num: '02', title: 'Lifecycle playbook', color: '#FF5FA2', body: 'How buyer signals could shape what a customer hears at each stage, drawn as one simple visual system.' },
   { num: '03', title: 'Enablement kit', color: '#19C37D', body: 'The train-the-trainer program, turned into a guide a new team can run without me in the room.' },
 ]
+
+// From the résumé, newest first. `highlights` show when a role is opened.
+export const experience = [
+  {
+    role: 'Sales Development Representative',
+    org: 'ZoomInfo',
+    place: 'Vancouver, WA',
+    dates: '2026 – Present',
+    color: '#2B50FF',
+    highlights: [
+      'Run daily outbound prospecting against a 100-call-a-day target, using discovery questions to connect prospects with sales reps for demos',
+      "Research accounts and buying signals in ZoomInfo's own platform, including Sales and GTM Studio",
+      "Use AI tools, including ZoomInfo's Mesh and AI agents, as part of my daily prospecting workflow",
+    ],
+  },
+  {
+    role: 'Assistant Restaurant Manager',
+    org: 'Ondus Restaurant & Bar · AC Hotels by Marriott',
+    place: 'Vancouver, WA',
+    dates: 'Mar 2026 – Oct 2026',
+    color: '#FF6B2C',
+    highlights: [
+      "Led a team of 20-30 and ran the restaurant's social media",
+      'Built and deployed a full web application (ondus.team) on AWS, with the site architecture, performance and an access-controlled backend, used daily by the team',
+      'Redesigned the guest-facing site and menu experience and launched a QR-based feedback loop that brought in 18 new TripAdvisor reviews and a 5-star rating in two weeks',
+      "Wrote a formal proposal to Vesta Hospitality Group's VP of Operations for a new Internal Systems Developer function, with a six-tool roadmap and business case",
+    ],
+  },
+  {
+    role: 'UX Design Intern',
+    org: 'Western Governors University · Fresh Start project',
+    dates: 'Jun – Aug 2026',
+    color: '#FF5FA2',
+    highlights: [
+      'Worked on a 3-person team redesigning the mobile dashboard for at-risk students, owning the dashboard home and three momentum-indicator variants',
+      'Ran usability testing with 10 participants in Maze, which shaped the V2 direction',
+    ],
+  },
+  {
+    role: 'Executive Pastry Chef',
+    org: 'Ondus on the Waterfront · AC Hotels by Marriott',
+    place: 'Vancouver, WA',
+    dates: 'May 2022 – Mar 2026',
+    color: '#19C37D',
+    highlights: [
+      'Led adoption of a new POS platform replacing a 4-year legacy system, and was the main trainer and point of contact for the full team through the change',
+      'Designed and maintained a staff-facing digital reference tool used daily across the team, with the same structure and content discipline as a well-organized site',
+    ],
+  },
+  {
+    role: 'Freelance Web & Brand Designer',
+    org: 'rr.design',
+    place: 'Portland metro',
+    dates: '2025 – Present',
+    color: '#FFD23F',
+    highlights: [
+      'Bonita Paws Pet Care: designed the brand kit, logo options and a responsive website, then handed it off to the owner',
+      'Own and maintain my portfolio site (rachelregnell.com) end to end, including hosting, custom domain and DNS, and ongoing content and performance updates',
+    ],
+  },
+  {
+    role: 'Finance Manager',
+    org: 'Triple C Auto Brokers',
+    place: 'Washougal, WA',
+    dates: 'Nov 2021 – May 2022',
+    color: '#2B50FF',
+    highlights: ['Cut loan approval wait times in half by mapping the customer journey and removing process friction'],
+  },
+]
+
+export const education = {
+  degree: 'BS, User Experience Design',
+  school: 'Western Governors University',
+  when: 'Expected 2027',
+  certs: [
+    'Google UX Design: Foundations of UX (Jun 2025)',
+    'Google UX Design: Wireframes & Low-Fi Prototypes (Aug 2025)',
+    'WGU Certificate: Strategic Thinking and Innovation (Jul 2025)',
+    'NSLS Member (Apr 2026)',
+    'Notary Public',
+  ],
+}

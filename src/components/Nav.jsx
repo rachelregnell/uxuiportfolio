@@ -14,6 +14,7 @@ export default function Nav() {
       <nav aria-label="Main" className="nav-links">
         <a href="#work">Work</a>
         <a href="#gtm">GTM thinking</a>
+        <a href="#experience">Experience</a>
         <motion.a href="#contact" className="btn btn-ink" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           Get in contact
         </motion.a>

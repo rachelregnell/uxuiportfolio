@@ -9,6 +9,7 @@ import StoryPicker from './components/StoryPicker.jsx'
 import StoryPanels from './components/StoryPanels.jsx'
 import Proof from './components/Proof.jsx'
 import Gtm from './components/Gtm.jsx'
+import Experience from './components/Experience.jsx'
 import NextProject from './components/NextProject.jsx'
 import Contact from './components/Contact.jsx'
 import Lightbox from './components/Lightbox.jsx'
@@ -47,6 +48,7 @@ export default function App() {
         <StoryPanels project={projects[p]} />
         <Proof />
         <Gtm />
+        <Experience />
         <NextProject project={projects[(p + 1) % projects.length]} onClick={nextProject} />
       </main>
       <Contact />
