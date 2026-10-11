@@ -164,7 +164,10 @@ h3 {
 }
 
 .nav-logo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
   font: 800 22px var(--display);
   letter-spacing: -0.02em;
   text-decoration: none;
