@@ -56,14 +56,6 @@ export default function Hero() {
           whileDrag={{ scale: 1.15, cursor: 'grabbing' }}
           data-cursor
         >
-          <motion.svg className="hero-sticker-ring" viewBox="0 0 200 200" aria-hidden="true" animate={{ rotate: 360 }} transition={{ duration: 18, ease: 'linear', repeat: Infinity }}>
-            <defs>
-              <path id="ring" d="M100 100 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0" />
-            </defs>
-            <text>
-              <textPath href="#ring">✦ open to work ✦ open to work ✦ open to work ✦ open to work </textPath>
-            </text>
-          </motion.svg>
           <span>Open to CX + GTM roles</span>
         </motion.div>
       </section>
