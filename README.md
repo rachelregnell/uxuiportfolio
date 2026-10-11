@@ -15,8 +15,9 @@ Built from the "Rachel Regnell Portfolio Mockup" design canvas, with Framer Moti
 
 ## Editing content
 
-All copy, links, images and projects live in [`src/content.js`](src/content.js). Fill in `email`,
-`linkedin` and `resume` there to wire up the contact buttons. Project images are in `src/assets/projects/`.
+All copy, links, images and projects live in [`src/content.js`](src/content.js). Contact links
+(email, LinkedIn, résumé) are set there too; the résumé PDF lives in `public/`, so to update it
+replace `public/Rachel_Regnell_Resume.pdf` with a file of the same name. Project images are in `src/assets/projects/`.
 
 Older full-size design exports are in `design-files/`.
 

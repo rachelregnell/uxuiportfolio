@@ -46,7 +46,7 @@ export default function Contact() {
         <MagneticLink href={links.email ? `mailto:${links.email}` : '#contact'} className="btn btn-yellow btn-big">
           Get in contact
         </MagneticLink>
-        <MagneticLink href={links.resume || '#contact'} className="btn btn-outline btn-big" {...(links.resume ? external : {})}>
+        <MagneticLink href={links.resume || '#contact'} className="btn btn-outline btn-big" {...(links.resume ? { ...external, download: 'Rachel_Regnell_Resume.pdf' } : {})}>
           Download resume
         </MagneticLink>
         <a href={links.linkedin || '#contact'} className="text-link" {...(links.linkedin ? external : {})}>LinkedIn</a>

@@ -20,10 +20,11 @@ import siteV2 from './assets/projects/site-iteration-2.webp'
 export const INK = '#14110F'
 
 export const links = {
-  // TODO: fill these in. Until then the buttons scroll to the contact section.
-  email: '',
-  linkedin: '',
-  resume: '',
+  // Empty values fall back to scrolling to the contact section.
+  email: 'design@rachelregnell.com',
+  linkedin: 'https://www.linkedin.com/in/rachel-regnell/',
+  // Files in public/ are served next to the page; BASE_URL keeps the path right on GitHub Pages.
+  resume: `${import.meta.env.BASE_URL}Rachel_Regnell_Resume.pdf`,
   site: 'https://rr.design',
 }
 
