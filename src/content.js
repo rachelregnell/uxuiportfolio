@@ -87,7 +87,7 @@ export const projects = [
         },
       },
       { label: '03 Staff portal', caption: 'The staff portal: a weekly scheduling view with role-based access, shift status, and hours tracking, plus a shift pickup board where open shifts are claimed in real time.', visual: { kind: 'image', src: ondusPortal, alt: 'Ondus staff portal weekly schedule with staff names hidden, and the shift pickup board' } },
-      { label: '04 Result', caption: 'Result. What changed because it shipped.' },
+      { label: '04 Result', caption: 'Result. 18 new TripAdvisor reviews and a 5-star rating shift in two weeks, plus 30+ staff shoutouts on Yelp in the first month.' },
     ],
     result: { big: '18', small: 'new TripAdvisor reviews and a 5-star rating shift in two weeks.' },
     story: {
@@ -145,7 +145,7 @@ export const projects = [
           ],
         },
       },
-      { label: '04 Result', caption: 'Result. What changed because it shipped.' },
+      { label: '04 Result', caption: 'Result. Won a WGU Excellence Award for Prototyping.' },
     ],
     result: { big: 'Award', small: 'Won a WGU Excellence Award for Prototyping.' },
     story: {
