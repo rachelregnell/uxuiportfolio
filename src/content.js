@@ -142,6 +142,7 @@ export const projects = [
     name: 'rachelregnell.com',
     color: '#FFD23F',
     fg: INK,
+    defaultStep: 1,
     tags: 'Personal Brand + Front-End + AWS Hosting + Always Iterating',
     hook: 'The history of this site: a portfolio named in homage to my grandfather, who had an online resume from the very start.',
     steps: [
