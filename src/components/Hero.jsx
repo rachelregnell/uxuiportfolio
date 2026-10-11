@@ -80,7 +80,7 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          Fifteen years of making customers feel looked after, now pointed at the customer experience behind a GTM team.
+          15 years creating optimal customer experiences.
         </motion.p>
         <motion.a href="#work" className="btn btn-ink" whileHover={{ scale: 1.06, rotate: -2 }} whileTap={{ scale: 0.95 }}>
           See the work
