@@ -82,7 +82,7 @@ export const projects = [
         visual: {
           kind: 'pair',
           variant: 'card',
-          doc: { src: ondusCards, alt: 'Ondus QR feedback card and 10% off discount card' },
+          doc: { src: ondusCards, alt: 'Ondus 10% off discount card and QR feedback card' },
           photo: { src: ondusReview, alt: 'Ondus "Leave us a review" card with a QR code linking to Yelp, a thank-you note, and lines for written feedback' },
         },
       },
