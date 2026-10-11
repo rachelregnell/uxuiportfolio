@@ -51,7 +51,7 @@ function Visual({ step, project, onZoom }) {
         </motion.button>
         <motion.button
           type="button"
-          className="zoomable pair-photo"
+          className={`zoomable pair-photo ${v.variant === 'card' ? 'pair-card' : ''}`}
           onClick={() => onZoom(v.photo)}
           initial={{ rotate: -20, y: 40, opacity: 0 }}
           animate={{ rotate: -7, y: 0, opacity: 1 }}

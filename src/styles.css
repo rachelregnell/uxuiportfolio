@@ -496,6 +496,14 @@ h3 {
   box-shadow: 6px 6px 0 var(--ink);
 }
 
+.pair-photo.pair-card {
+  width: 30%;
+  padding: 0;
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
 .pair-photo img {
   border-radius: 2px;
 }
