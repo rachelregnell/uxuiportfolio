@@ -121,6 +121,10 @@ h3 {
 }
 
 .btn {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -700,6 +704,8 @@ h3 {
 /* ---------- proof ---------- */
 
 .proof {
+  /* the copy slides in from the right; keep it from widening the page before it does */
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -716,7 +722,8 @@ h3 {
 }
 
 .proof-copy {
-  flex: 1 1 320px;
+  flex: 1 1 280px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -1124,4 +1131,231 @@ h3 {
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
+}
+
+/* ---------- contact panel ---------- */
+
+.cp-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 160;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(20, 17, 15, 0.7);
+}
+
+.cp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: min(640px, 100%);
+  max-height: calc(100svh - 32px);
+  overflow-y: auto;
+  padding: clamp(20px, 4vw, 36px);
+  border: 3px solid var(--ink);
+  border-radius: 28px;
+  background: var(--cream);
+  color: var(--ink);
+  box-shadow: 10px 10px 0 var(--blue);
+}
+
+@media (max-width: 560px) {
+  .cp-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+  .cp {
+    max-height: 92svh;
+    border-radius: 28px 28px 0 0;
+    box-shadow: none;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+.cp-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cp-head h2 {
+  font: 800 clamp(40px, 7vw, 64px) / 0.9 var(--display);
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.cp-close {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cp-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cp-tab {
+  position: relative;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--cream);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cp-tab-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+}
+
+.cp-tab-label {
+  position: relative;
+}
+
+.cp-tab.is-active .cp-tab-label {
+  color: var(--cream);
+}
+
+.cp-label,
+.cp-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cp-email {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cp-email-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cp input,
+.cp textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--ink);
+  font: 500 17px var(--body);
+}
+
+.cp-email-row input {
+  flex: 1 1 220px;
+  width: auto;
+  min-width: 0;
+  font-weight: 700;
+}
+
+.cp textarea {
+  resize: vertical;
+}
+
+.cp-small-link {
+  align-self: flex-start;
+  margin-top: 8px;
+  padding: 6px 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.cp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cp-form .btn {
+  align-self: flex-start;
+}
+
+.cp-form .btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.cp-hp {
+  position: absolute;
+  left: -9999px;
+}
+
+.cp-error {
+  margin: 0;
+  padding: 12px 16px;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: var(--pink);
+  font-weight: 500;
+}
+
+.cp-sent {
+  padding: 28px;
+  border-radius: 20px;
+  background: var(--green);
+}
+
+.cp-sent-big {
+  font: 800 64px / 0.9 var(--display);
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.cp-sent p {
+  margin: 10px 0 0;
+  font-size: 18px;
+}
+
+.cp-book {
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-book iframe {
+  width: 100%;
+  height: min(620px, 60svh);
+  border: 2px solid var(--ink);
+  border-radius: 16px;
+  background: var(--white);
+}
+
+.cp-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 16px;
+  border-top: 2px solid rgba(20, 17, 15, 0.15);
+  font-weight: 700;
+}
+
+.cp-foot a {
+  padding: 6px 0;
 }

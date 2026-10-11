@@ -13,6 +13,7 @@ import Experience from './components/Experience.jsx'
 import NextProject from './components/NextProject.jsx'
 import Contact from './components/Contact.jsx'
 import Lightbox from './components/Lightbox.jsx'
+import ContactPanel from './components/ContactPanel.jsx'
 
 const firstStep = (i) => projects[i].defaultStep ?? 0
 
@@ -27,6 +28,9 @@ export default function App() {
   }, [])
 
   const closeZoom = useCallback(() => setZoom(null), [])
+  const [contactOpen, setContactOpen] = useState(false)
+  const openContact = useCallback(() => setContactOpen(true), [])
+  const closeContact = useCallback(() => setContactOpen(false), [])
 
   const nextProject = () => {
     pickProject((p + 1) % projects.length)
@@ -40,7 +44,7 @@ export default function App() {
     <>
       <motion.div className="scroll-progress" style={{ scaleX: progress }} />
       <Cursor />
-      <Nav />
+      <Nav onContact={openContact} />
       <main>
         <Hero />
         <Band />
@@ -51,8 +55,9 @@ export default function App() {
         <Experience />
         <NextProject project={projects[(p + 1) % projects.length]} onClick={nextProject} />
       </main>
-      <Contact />
+      <Contact onContact={openContact} />
       <Lightbox image={zoom} onClose={closeZoom} />
+      <ContactPanel open={contactOpen} onClose={closeContact} />
     </>
   )
 }

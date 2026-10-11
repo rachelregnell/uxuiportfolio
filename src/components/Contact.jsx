@@ -30,7 +30,7 @@ function MagneticLink({ className, children, ...rest }) {
 
 const external = { target: '_blank', rel: 'noreferrer' }
 
-export default function Contact() {
+export default function Contact({ onContact }) {
   return (
     <footer id="contact" className="contact">
       <motion.div
@@ -43,9 +43,9 @@ export default function Contact() {
         Let's talk.
       </motion.div>
       <div className="contact-links">
-        <MagneticLink href={links.email ? `mailto:${links.email}` : '#contact'} className="btn btn-yellow btn-big">
+        <motion.button type="button" className="btn btn-yellow btn-big" onClick={onContact} whileHover={{ scale: 1.05, rotate: -2 }} whileTap={{ scale: 0.94 }}>
           Get in contact
-        </MagneticLink>
+        </motion.button>
         <MagneticLink href={links.resume || '#contact'} className="btn btn-outline btn-big" {...(links.resume ? { ...external, download: 'Rachel_Regnell_Resume.pdf' } : {})}>
           Download resume
         </MagneticLink>
