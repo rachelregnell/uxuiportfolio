@@ -196,6 +196,7 @@ export default function ContactPanel({ open, onClose }) {
 
             <div className="cp-foot">
               <a href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+              {links.github && <a href={links.github} target="_blank" rel="noreferrer">GitHub ↗</a>}
               <a href={links.resume} target="_blank" rel="noreferrer" download="Rachel_Regnell_Resume.pdf">Résumé ↓</a>
             </div>
           </motion.div>
