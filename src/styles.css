@@ -286,9 +286,10 @@ h3 {
 
 
 @media (max-width: 640px) {
+  /* centered on the line between the blue and black blocks (--seam is set by Hero.jsx) */
   .hero-sticker {
-    top: auto;
-    bottom: 12px;
+    top: calc(var(--seam, 50%) - 52px);
+    right: 8px;
     margin-top: 0;
     width: 104px;
     padding: 22px;
@@ -1076,6 +1077,22 @@ h3 {
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
+}
+
+.contact-text-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+@media (max-width: 640px) {
+  .contact-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-text-links .text-link:first-child {
+    padding-left: 0;
+  }
 }
 
 .text-link {
