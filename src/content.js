@@ -26,6 +26,11 @@ export const links = {
   // Files in public/ are served next to the page; BASE_URL keeps the path right on GitHub Pages.
   resume: `${import.meta.env.BASE_URL}Rachel_Regnell_Resume.pdf`,
   site: 'https://rare-status-284958.framer.app/',
+  // Contact panel. Leave a value empty and its tab is hidden.
+  // Public booking page (Calendly, Google appointment schedule, Cal.com…). Shown embedded in the panel.
+  booking: '',
+  // Formspree endpoint, e.g. 'https://formspree.io/f/abcd1234'. Messages arrive in your inbox.
+  formspree: '',
 }
 
 export const process = ['Sketch', 'Mockup', 'Test', 'Iterate', 'Result', 'Refine', 'Launch']

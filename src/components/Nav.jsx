@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-export default function Nav() {
+export default function Nav({ onContact }) {
   return (
     <motion.header
       className="nav"
@@ -15,9 +15,9 @@ export default function Nav() {
         <a href="#work">Work</a>
         <a href="#gtm">GTM thinking</a>
         <a href="#experience">Experience</a>
-        <motion.a href="#contact" className="btn btn-ink" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <motion.button type="button" className="btn btn-ink" onClick={onContact} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           Get in contact
-        </motion.a>
+        </motion.button>
       </nav>
     </motion.header>
   )
