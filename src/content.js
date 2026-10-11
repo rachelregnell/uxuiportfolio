@@ -4,6 +4,7 @@ import freshWire from './assets/projects/fresh-start-wireframe.webp'
 import freshFinal from './assets/projects/fresh-start-final.webp'
 import ondusMenus from './assets/projects/ondus-menus.webp'
 import ondusCards from './assets/projects/ondus-guest-cards.webp'
+import ondusReview from './assets/projects/ondus-review-card.webp'
 import ondusPortal from './assets/projects/ondus-staff-portal.webp'
 import bonitaKit from './assets/projects/bonita-brand-kit.webp'
 import bonitaLogo from './assets/projects/bonita-logo.webp'
@@ -75,7 +76,16 @@ export const projects = [
     hook: 'Employee experience and guest experience design: a staff portal for the team and a QR feedback loop for guests.',
     steps: [
       { label: '01 Print menus', caption: 'Menu redesign: from a generic centered template to a cohesive coastal print system. Lunch and dinner share one system in different colorways.', visual: { kind: 'image', src: ondusMenus, alt: 'Ondus on the Waterfront before and after: the old plain dinner menu next to the new lunch and dinner menus on a coastal shell pattern' } },
-      { label: '02 Guest touchpoints', caption: 'Guest feedback: a QR touchpoint designed to drive TripAdvisor reviews, next to a branded discount card.', visual: { kind: 'image', src: ondusCards, alt: 'Ondus QR feedback card and 10% off discount card' } },
+      {
+        label: '02 Guest touchpoints',
+        caption: 'Guest feedback: a QR touchpoint designed to drive TripAdvisor reviews, a branded discount card, and a Yelp review card. Guest shoutouts on Yelp help reward the staff.',
+        visual: {
+          kind: 'pair',
+          variant: 'card',
+          doc: { src: ondusCards, alt: 'Ondus QR feedback card and 10% off discount card' },
+          photo: { src: ondusReview, alt: 'Ondus "Leave us a review" card with a QR code linking to Yelp, a thank-you note, and lines for written feedback' },
+        },
+      },
       { label: '03 Staff portal', caption: 'The staff portal: a weekly scheduling view with role-based access, shift status, and hours tracking, plus a shift pickup board where open shifts are claimed in real time.', visual: { kind: 'image', src: ondusPortal, alt: 'Ondus staff portal weekly schedule with staff names hidden, and the shift pickup board' } },
       { label: '04 Result', caption: 'Result. What changed because it shipped.' },
     ],
