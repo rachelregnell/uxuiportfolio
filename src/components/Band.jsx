@@ -8,7 +8,7 @@ export default function Band() {
       <motion.div
         className="band-track"
         aria-hidden="true"
-        animate={{ x: ['0%', '-50%'] }}
+        animate={{ x: ['-50%', '0%'] }}
         transition={{ duration: 22, ease: 'linear', repeat: Infinity }}
       >
         {row.map((step, i) => (
