@@ -30,7 +30,7 @@ export const links = {
   // Public booking page (Calendly, Google appointment schedule, Cal.com…). Shown embedded in the panel.
   booking: '',
   // Formspree endpoint, e.g. 'https://formspree.io/f/abcd1234'. Messages arrive in your inbox.
-  formspree: '',
+  formspree: 'https://formspree.io/f/xgorrlky',
 }
 
 export const process = ['Sketch', 'Mockup', 'Test', 'Iterate', 'Result', 'Refine', 'Launch']
