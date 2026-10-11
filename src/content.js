@@ -27,8 +27,12 @@ export const links = {
   resume: `${import.meta.env.BASE_URL}Rachel_Regnell_Resume.pdf`,
   site: 'https://rare-status-284958.framer.app/',
   // Contact panel. Leave a value empty and its tab is hidden.
-  // Public booking page (Calendly, Google appointment schedule, Cal.com…). Shown embedded in the panel.
-  booking: '',
+  // Public booking page (Google appointment schedule, Calendly…). Opens in a new tab from the panel.
+  booking: 'https://calendar.app.google/U7uX4AaKwdFL7fX29',
+  // Optional: the calendar's embed address, to show it inside the panel instead of a button.
+  // Google Calendar: open the appointment schedule → Share → Website embed → Inline calendar,
+  // and copy the src="…" value (it looks like https://calendar.google.com/calendar/appointments/schedules/…?gv=true).
+  bookingEmbed: '',
   // Formspree endpoint, e.g. 'https://formspree.io/f/abcd1234'. Messages arrive in your inbox.
   formspree: 'https://formspree.io/f/xgorrlky',
 }
